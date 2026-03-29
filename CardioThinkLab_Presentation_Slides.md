@@ -253,27 +253,28 @@ We took a phased approach to minimise disruption while maximising impact:
 
 ---
 
-## SLIDE 13 — Summary: Value Delivered
+## SLIDE 13 — Summary
 
-### What We Achieved Together
+### At a Glance
 
-**Performance**
-- Desktop performance score: 52 → **98** (+88%)
-- Page load time: 18.4s → **~1 second** (desktop)
-- LCP: 12.4s → **1.0s** — now well within Google's "Good" range
-- TTFB: 10.1s → **under 600ms** — meeting industry best practice
+| Area | Before | After | Impact |
+|---|---|---|---|
+| Performance Score | 52 | **98** | **+88%** |
+| Page Load (Desktop) | 18.4s | **~1s** | **18x faster** |
+| Largest Contentful Paint | 12.4s | **1.0s** | **12x faster** |
+| Time to First Byte | 10.1s | **< 0.6s** | **17x faster** |
+| PHP Version | Legacy | **8.4** | Latest LTS |
+| Caching | None | **Memcached + Varnish** | Full stack |
+| Multilingual | Not available | **WPML Live** | /ja/, /en/, /es/ |
+| Error Logs | Multiple warnings | **Clean** | All resolved |
 
-**Stability**
-- Clean PHP error logs — all fixable errors resolved
-- Modern, supported tech stack (PHP 8.4, latest WordPress & plugins)
-- Reduced plugin and theme bloat
+### Key Outcomes
 
-**Scale**
-- Multilingual infrastructure live and SEO-ready
-- Caching layers in place to handle traffic growth
-- Foundation set for UI refresh and content expansion
-
-> *CardioThinkLab now has the technical foundation to match the quality of its scientific content — fast, stable, and ready to grow.*
+- **Faster** — From an 18-second load to under 1 second on desktop; all Core Web Vitals now in Google's "Good" range
+- **Cleaner** — Unused themes & plugins removed, all PHP errors resolved, modern tech stack (PHP 8.4)
+- **Global-ready** — Multilingual infrastructure live with SEO-friendly URLs, sitemaps, and hreflang tags
+- **Resilient** — Dual caching layers (object + full-page) protect performance under traffic spikes
+- **Future-proof** — Foundation in place for UI refresh, content expansion, and additional language rollouts
 
 ---
 
