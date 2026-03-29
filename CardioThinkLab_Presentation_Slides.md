@@ -86,7 +86,7 @@ We took a phased approach to minimise disruption while maximising impact:
 - Reduce duplicate database queries
 
 **Phase 3 — Structural Improvements**
-- Implement multilingual URL architecture (WPML)
+- Implement multilingual subdirectory URL architecture (WPML)
 - Create proper sitemaps and hreflang configuration
 - Build custom 404 error template
 - Fix platform-specific issues (YouTube embeds on iOS)
@@ -199,18 +199,18 @@ We took a phased approach to minimise disruption while maximising impact:
 
 | Feature | Implementation |
 |---|---|
-| URL Structure | cardiothinklab.com/ja/, /en/, /es/ |
+| URL Structure | Subdirectory-based — cardiothinklab.com/ja/, /en/, /es/ |
 | Sitemaps | Auto-generated per language (e.g., sitemap-ja.xml) |
 | Hreflang Tags | Injected in `<head>` + included in sitemaps |
-| Redirects | 301 redirects from ?lang=ja → /ja/ |
+| Redirects | 301 redirects from query parameters (?lang=ja) to subdirectories (/ja/) |
 | Translation Management | WPML String Translation (ready) + ACF integration (in progress) |
 
 ### What This Enables
 
-- Clean, SEO-friendly URLs for each language
+- Clean, SEO-friendly subdirectory URLs for each language
 - Search engines can correctly index and serve the right language version to users
 - Scalable architecture — adding new languages is straightforward
-- Japanese translation directory is now live: cardiothinklab.com/ja/
+- Japanese subdirectory is now live: cardiothinklab.com/ja/
 
 ---
 
@@ -265,14 +265,14 @@ We took a phased approach to minimise disruption while maximising impact:
 | Time to First Byte | 10.1s | **< 0.6s** | **17x faster** |
 | PHP Version | Legacy | **8.4** | Latest LTS |
 | Caching | None | **Memcached + Varnish** | Full stack |
-| Multilingual | Not available | **WPML Live** | /ja/, /en/, /es/ |
+| Multilingual | Not available | **WPML Live** | Subdirectory URLs (/ja/, /en/, /es/) |
 | Error Logs | Multiple warnings | **Clean** | All resolved |
 
 ### Key Outcomes
 
 - **Faster** — From an 18-second load to under 1 second on desktop; all Core Web Vitals now in Google's "Good" range
 - **Cleaner** — Unused themes & plugins removed, all PHP errors resolved, modern tech stack (PHP 8.4)
-- **Global-ready** — Multilingual infrastructure live with SEO-friendly URLs, sitemaps, and hreflang tags
+- **Global-ready** — Multilingual infrastructure live with SEO-friendly subdirectory URLs, sitemaps, and hreflang tags
 - **Resilient** — Dual caching layers (object + full-page) protect performance under traffic spikes
 - **Future-proof** — Foundation in place for UI refresh, content expansion, and additional language rollouts
 
